@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VXF-Nw-6Ia">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6cc-hH-8uE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,62 +8,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="qKz-rt-J5e">
-            <objects>
-                <navigationController id="VXF-Nw-6Ia" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IbC-m6-3Wg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="LeD-yf-5uI" kind="relationship" relationship="rootViewController" id="cyX-5x-wcc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lJF-Tm-vQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1252" y="-229"/>
-        </scene>
         <!--View Controller-->
-        <scene sceneID="SDk-20-udW">
+        <scene sceneID="zZ9-wb-cKl">
             <objects>
-                <viewController id="LeD-yf-5uI" customClass="ViewController" customModule="Sample_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UW3-DJ-aqn">
+                <viewController id="6cc-hH-8uE" customClass="ViewController" customModule="Sample_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XKR-5l-rNR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA8-wd-8WD">
-                                <rect key="frame" x="184" y="425" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="Click_moveBtn:" destination="LeD-yf-5uI" eventType="touchUpInside" id="GD8-QL-LDU"/>
-                                </connections>
-                            </button>
+                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WtP-7e-njT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="M1R-bP-3gN"/>
+                        <constraints>
+                            <constraint firstItem="WtP-7e-njT" firstAttribute="centerX" secondItem="XKR-5l-rNR" secondAttribute="centerX" id="1ps-uQ-dmG"/>
+                            <constraint firstItem="WtP-7e-njT" firstAttribute="centerY" secondItem="XKR-5l-rNR" secondAttribute="centerY" id="4Q8-uk-1On"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ukY-fy-Gmz"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UQv-xV-1pN"/>
+                    <connections>
+                        <outlet property="WebViewMain" destination="WtP-7e-njT" id="JbU-nT-v5G"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zmI-4k-cCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIz-Fg-fKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391" y="-229"/>
-        </scene>
-        <!--Detail Controller-->
-        <scene sceneID="UNI-tq-LuT">
-            <objects>
-                <viewController storyboardIdentifier="DetailController" id="Ixr-YR-szH" customClass="DetailController" customModule="Sample_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0m8-p2-k9N" customClass="D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Pyh-wJ-iBi"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WZ8-n2-j1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="242" y="-227"/>
+            <point key="canvasLocation" x="-1323.1884057971015" y="-994.41964285714278"/>
         </scene>
     </scenes>
 </document>

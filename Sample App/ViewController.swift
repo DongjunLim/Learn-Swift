@@ -7,28 +7,27 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,WKUIDelegate{
 
-    @IBAction func Click_moveBtn(_ sender: Any) {
-        //storyboard finc controller : DetailController
-           
-        //옵셔널 바인딩
-        if let controller = self.storyboard?.instantiateViewController(withIdentifier:"DetailController") {
-            self.navigationController?.pushViewController(controller, animated: true)
-        }
-        //move controller
-        
+    
+    @IBOutlet weak var WebViewMain: WKWebView!
+    
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        WebViewMain = WKWebView(frame: .zero, configuration: webConfiguration)
+        WebViewMain.uiDelegate = self
+        view = WebViewMain
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+        
+        view.backgroundColor = .red
+        let myURL = URL(string: "https://www.apple.com")
+        let myRequest = URLRequest(url: myURL!)
+        WebViewMain.load(myRequest)
+}
 
-    //click event
-    @IBAction func clickMoveButton(_ sender: Any) {
-        print("Click Move")
-    }
-    
 }
 
