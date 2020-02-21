@@ -13,6 +13,7 @@
 		0E90F1DB23FFAE7A00C5C427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E90F1D923FFAE7A00C5C427 /* Main.storyboard */; };
 		0E90F1DD23FFAE7C00C5C427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E90F1DC23FFAE7C00C5C427 /* Assets.xcassets */; };
 		0E90F1E023FFAE7C00C5C427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E90F1DE23FFAE7C00C5C427 /* LaunchScreen.storyboard */; };
+		0E90F1E823FFB6F800C5C427 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90F1E723FFB6F800C5C427 /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0E90F1DC23FFAE7C00C5C427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E90F1DF23FFAE7C00C5C427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E90F1E123FFAE7C00C5C427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E90F1E723FFB6F800C5C427 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0E90F1DC23FFAE7C00C5C427 /* Assets.xcassets */,
 				0E90F1DE23FFAE7C00C5C427 /* LaunchScreen.storyboard */,
 				0E90F1E123FFAE7C00C5C427 /* Info.plist */,
+				0E90F1E723FFB6F800C5C427 /* DetailController.swift */,
 			);
 			path = "Sample App";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E90F1E823FFB6F800C5C427 /* DetailController.swift in Sources */,
 				0E90F1D823FFAE7A00C5C427 /* ViewController.swift in Sources */,
 				0E90F1D423FFAE7A00C5C427 /* AppDelegate.swift in Sources */,
 				0E90F1D623FFAE7A00C5C427 /* SceneDelegate.swift in Sources */,
@@ -286,6 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Sample App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Sample App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
